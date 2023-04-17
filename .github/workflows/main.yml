@@ -10,7 +10,7 @@ on:
       - reopened
 jobs:
   sonarcloud:
-    name: Jfrog github
+    name: Aws s3 github intigration
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
