@@ -64,4 +64,4 @@ jobs:
           args: zip dist.zip ./dist -r
        - name: upload file to artifactory
          run: |
-           jf rt upload  dist.zip /Angular-App/App1/build1/
+           jf rt upload  dist.zip /bptmounika/download-artifact/src
