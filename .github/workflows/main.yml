@@ -54,9 +54,9 @@ jobs:
         uses: montudor/action-zip@v1
         with:
           args: zip dist.zip ./dist -r
-      - name: upload file to artifactory
-        run: >
-          jf rt upload  dist.zip /Angular-App/App1/build1/
+#       - name: upload file to artifactory
+#         run: >
+#           jf rt upload  dist.zip /Angular-App/App1/build1/
       - name: Upload to S3
         uses: shallwefootball/s3-upload-action@master
         id: S3
@@ -64,4 +64,4 @@ jobs:
           aws_key_id: ${{secrets.AWS_KEY_ID}}
           aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: actiontest-s3
-          source_dir: /Angular-App/App1/build1/
+          source_dir: ./dist
