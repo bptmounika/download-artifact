@@ -35,8 +35,8 @@ jobs:
       - name: upload all aritifacts
         uses: actions/upload-artifact@v3
         with:
-          name: dist2
-          path: ./dist2
+          name: dist
+          path: ./dist
 #       - name: Setup JFrog CLI for integration
 #         uses: jfrog/setup-jfrog-cli@v3
 #         env:
@@ -53,7 +53,7 @@ jobs:
       - name: download artifact
         uses: actions/download-artifact@v3
         with:
-          name: my-download1
+          name: dist
       - name: validate output
         run: |
           pwd
