@@ -53,7 +53,7 @@ jobs:
       - name: download artifact
         uses: actions/download-artifact@v3
         with:
-          name: dist
+          name: dist2
       - name: validate output
         run: |
           pwd
